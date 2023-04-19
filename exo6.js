@@ -5,11 +5,9 @@ function whoSeeTheSun(arr) {
   const seeTheSun = []
   let maxHeight = 0
   for (let i = arr.length; i >= 0; i--) {
-    for (let j = i - 1; j >= 0; j--) {
-      if (arr[j] > maxHeight) {
-        seeTheSun.push(arr[j])
-        maxHeight = arr[j]
-      }
+    if (arr[i] > maxHeight) {
+      maxHeight = arr[i]
+      seeTheSun.push(arr[i])
     }
   }
   console.log(
